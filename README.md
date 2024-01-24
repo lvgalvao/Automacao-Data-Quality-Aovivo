@@ -14,6 +14,7 @@ pyenv local 3.11.5
 ```
 3. Instale as dependências do projeto:
 ```bash
-python -m venv nome_do_ambiente_virtual 
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt  
 ```
