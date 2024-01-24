@@ -18,3 +18,18 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt  
 ```
+
+4. Rode a aplicação
+```bash
+task run
+```
+
+5. Rode os testes
+```bash
+task test
+```
+
+1. Rode a documentação
+```bash
+task test
+```
