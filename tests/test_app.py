@@ -22,7 +22,14 @@ def test_app_opens(driver):
     driver.get("http://localhost:8501")
     sleep(5)
 
-def test_app_opens(driver):
+def test_check_title_is(driver):
     # Verificar se a página abre
     driver.get("http://localhost:8501")
+    # Verifica se o titulo de página é
     sleep(5)
+    # Capturar o título da página
+    page_title = driver.title
+
+    # Verificar se o título da página é o esperado
+    expected_title = "Validador de schema excel"  # Substitua com o título real esperado
+    assert page_title == expected_title, f"O título da página era '{page_title}', mas esperava-se '{expected_title}'"
