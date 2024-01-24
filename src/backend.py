@@ -1,17 +1,7 @@
 import pandas as pd
 from contrato import Vendas
 
-def process_excel(uploaded_file):
-    """
-    Processa um arquivo Excel, validando-o contra um esquema específico.
-
-    Args:
-        uploaded_file: Um arquivo Excel carregado pelo usuário.
-
-    Returns:
-        Uma tupla (resultado, erro), onde 'resultado' é um booleano indicando se a validação
-        foi bem-sucedida e 'erro' é uma mensagem de erro se a validação falhar.
-    """    
+def process_excel(uploaded_file):   
     try:
         df = pd.read_excel(uploaded_file)
 

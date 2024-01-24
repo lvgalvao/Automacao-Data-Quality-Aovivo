@@ -9,19 +9,7 @@ class CategoriaEnum(str, Enum):
 
 
 class Vendas(BaseModel):
-
-    """
-    Modelo de dados para as vendas.
-
-    Args:
-        email (str): email do comprador
-        data (datetime): data da compra
-        valor (int): valor da compra
-        produto (str): nome do produto
-        quantidade (int): quantidade de produtos
-        categoria (str): categoria do produto
-
-    """
+    
     email: EmailStr
     data: datetime
     produto: str
