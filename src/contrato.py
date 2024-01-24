@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt, validator
+from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt, field_validator
 from datetime import datetime
 from enum import Enum
 
@@ -24,10 +24,11 @@ class Vendas(BaseModel):
     """
     email: EmailStr
     data: datetime
+    produto: str
     valor: PositiveFloat
     quantidade: PositiveInt
     categoria: CategoriaEnum
 
-    @validator('categoria')
+    @field_validator('categoria')
     def categoria_deve_estar_no_enum(cls, error):
         return error
